@@ -1,20 +1,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GoalGameManager : MonoBehaviour
 {
+    [Header("Goal area animator, used to setup and move the area")]
     [SerializeField]
     private Animator goalGameAnimator;
+    [Header("Reference to the ball prefab to be used in game")]
     [SerializeField]
     private GameObject ballPrefab;
+    
+
+    [Header("Goal panel, materials and canvas references")]
     [SerializeField]
     private GameObject goalPanel;
     [SerializeField]
     private Material goalHighlightedMaterial;
     [SerializeField]
     private Material goalIdleMaterial;
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+    [SerializeField]
+    private GameObject goalScoredCanvas;
 
     private GameObject currentBall;
     private int score = 0;
@@ -31,6 +41,7 @@ public class GoalGameManager : MonoBehaviour
     public void StartGame()
     {
         score = 0;
+        scoreText.text = score.ToString();
         goalGameAnimator.SetTrigger(Constant.PLAY_GAME);
         CreateBall(null, null);
         gameStarted = true;
@@ -69,14 +80,21 @@ public class GoalGameManager : MonoBehaviour
     private void NewGoal(object sender, EventArgs e)
     {
         score++;
-        Debug.Log("GOOOOAL!!! Total score: " +  score);
+        PrintScore();
         StartCoroutine(HighlightGoalPanel());
     }
 
     IEnumerator HighlightGoalPanel()
     {
-        goalPanel.GetComponent<Renderer>().sharedMaterial = goalHighlightedMaterial;
+        goalScoredCanvas.SetActive(true);
+        goalPanel.GetComponent<Renderer>().sharedMaterial = goalHighlightedMaterial;       
         yield return new WaitForSeconds(Constant.HIGHLIGHT_GOAL_TIME);
+        goalScoredCanvas.SetActive(false);
         goalPanel.GetComponent<Renderer>().sharedMaterial = goalIdleMaterial;
+    }
+
+    private void PrintScore()
+    {
+        scoreText.text = score.ToString();
     }
 }

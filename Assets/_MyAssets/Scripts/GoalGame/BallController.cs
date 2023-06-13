@@ -21,7 +21,6 @@ public class BallController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -32,14 +31,18 @@ public class BallController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.gameObject.tag == "Goal")
-        {
-            onGoalShooted.Invoke(null, null);
-        }
-        if (firstCollision && (collision.collider.gameObject.tag == "Floor" || collision.collider.gameObject.tag == "Wall"))
+        if (firstCollision && (collision.collider.gameObject.tag == Constant.FLOOR_TAG || collision.collider.gameObject.tag == Constant.WALL_TAG))
         {
             firstCollision = false;
             onBallShooted.Invoke(this.gameObject, null);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == Constant.GOAL_TAG)
+        {
+            onGoalShooted.Invoke(null, null);
         }
     }
 
