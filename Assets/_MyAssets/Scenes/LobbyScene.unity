@@ -1054,7 +1054,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 1c031727280c95a4f9709c4f1e4903b4, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 2355b8e86bd96cd409dea3ad3a105f0d, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -2292,7 +2292,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 2355b8e86bd96cd409dea3ad3a105f0d, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 76c3296cbbb06684fb472335f574750e, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -3294,7 +3294,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 485f156d0fff1044b827575ffdc13c76, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: b70006953c27ec14ba473f1718c34e01, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -11031,6 +11031,84 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &880136879
+GameObject:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 880136881}
+  - component: {fileID: 880136880}
+  m_Layer: 0
+  m_Name: SceneIDMap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &880136880
+MonoBehaviour:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880136879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1342375995}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Entries:
+  - id: 0
+    category: 0
+    gameObject: {fileID: 2129384769}
+  - id: 1
+    category: 0
+    gameObject: {fileID: 180988381}
+  - id: 2
+    category: 0
+    gameObject: {fileID: 227157618}
+  - id: 3
+    category: 0
+    gameObject: {fileID: 463678177}
+  - id: 4
+    category: 0
+    gameObject: {fileID: 1694959876}
+  - id: 5
+    category: 0
+    gameObject: {fileID: 1268250225}
+  - id: 6
+    category: 0
+    gameObject: {fileID: 1869833114}
+  - id: 7
+    category: 0
+    gameObject: {fileID: 1054564493}
+  - id: 8
+    category: 0
+    gameObject: {fileID: 1135679483}
+  - id: 9
+    category: 0
+    gameObject: {fileID: 1490218861}
+  - id: 10
+    category: 0
+    gameObject: {fileID: 74568169}
+--- !u!4 &880136881
+Transform:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880136879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &880318024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13223,7 +13301,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 1d857653be223264cbca4c89a27a720d, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: ff9c2dd158edd0447b2d9e52d4c702e6, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -14422,7 +14500,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: b70006953c27ec14ba473f1718c34e01, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 69e7a53dfe1e9c1469c5862fb4489956, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -16708,6 +16786,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!115 &1342375995
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 5
+  m_Script: 
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_ExecutionOrder: 0
+  m_ClassName: SceneObjectIDMapSceneAsset
+  m_Namespace: UnityEngine.Rendering.HighDefinition
 --- !u!1 &1358722062
 GameObject:
   m_ObjectHideFlags: 0
@@ -18127,7 +18219,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 69e7a53dfe1e9c1469c5862fb4489956, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: b24c1b740973ded4fb21e2325a0d55ea, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -20121,7 +20213,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 76c3296cbbb06684fb472335f574750e, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 1c031727280c95a4f9709c4f1e4903b4, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -21946,7 +22038,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 68979478ece118141ac95a1825292282, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 9f06df79836d9964b91d6b23f7decab9, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -23816,7 +23908,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: b24c1b740973ded4fb21e2325a0d55ea, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 68979478ece118141ac95a1825292282, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
